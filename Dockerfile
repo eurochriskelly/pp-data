@@ -1,0 +1,5 @@
+FROM mysql:8.0
+
+ENV MYSQL_DATABASE=pp_data
+
+EXPOSE 3306
