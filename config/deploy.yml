@@ -1,0 +1,27 @@
+
+# Name of your application. Used to uniquely configure containers.
+service: pp-data
+
+# Name of the container image.
+image: pp-data
+
+# Deploy to these servers.
+servers:
+  web:
+    hosts:
+      - 10.8.0.1
+    options:
+      publish:
+        - '3306:3306'
+
+ssh:
+  user: pp-admin
+
+registry:
+  server: localhost:5555
+
+builder:
+  dockerfile: ./Dockerfile
+  local: false
+  arch: amd64
+  remote: ssh://10.8.0.1

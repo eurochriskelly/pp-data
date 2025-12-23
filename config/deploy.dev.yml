@@ -1,0 +1,18 @@
+service: pp-data-dev
+servers:
+  web:
+    hosts:
+      - kamal-dev
+
+ssh:
+  user: ubuntu
+
+# registry must be reachable FROM the VM
+registry:
+  server: localhost:5555
+
+builder:
+  dockerfile: ./Dockerfile
+  local: false
+  arch: arm64
+  remote: ssh://ubuntu@kamal-dev
