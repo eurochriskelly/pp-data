@@ -16,3 +16,8 @@ builder:
   local: false
   arch: arm64
   remote: ssh://ubuntu@kamal-dev
+
+env:
+  secret: 
+    - SECRET_MYSQL_ROOT_PASSWORD
+

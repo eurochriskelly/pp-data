@@ -25,3 +25,7 @@ builder:
   local: false
   arch: amd64
   remote: ssh://10.8.0.1
+
+env:
+  secret: 
+    - SECRET_MYSQL_ROOT_PASSWORD
