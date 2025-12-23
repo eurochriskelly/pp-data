@@ -19,5 +19,5 @@ builder:
 
 env:
   secret: 
-    - SECRET_MYSQL_ROOT_PASSWORD
+    - MYSQL_ROOT_PASSWORD
 
