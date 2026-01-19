@@ -1,12 +1,13 @@
 service: pp-data-dev
- 
+
 ssh:
-  user: ubuntu
+  user: pp-admin
 
 servers:
   web:
     hosts:
-      - kamal-dev
+      - 192.168.1.137
+    proxy: false
     options:
       publish:
         - '3306:3306'
@@ -14,7 +15,5 @@ servers:
 builder:
   dockerfile: ./Dockerfile
   local: false
-  arch: arm64
-  remote: ssh://ubuntu@kamal-dev
-
-
+  arch: amd64
+  remote: ssh://pp-admin@192.168.1.137
