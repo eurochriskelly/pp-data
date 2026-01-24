@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS PPClubEvents;
 CREATE DATABASE IF NOT EXISTS PPClubEvents;
 USE PPClubEvents;
 
@@ -23,8 +24,7 @@ CREATE TABLE Events (
     organizer_id VARCHAR(50) NOT NULL,
     region VARCHAR(100), -- e.g., 'Leinster', 'Dublin'
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (organizer_id) REFERENCES Users(id)
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 -- 3. Sports Table (Lookup for tags)
